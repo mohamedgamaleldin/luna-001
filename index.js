@@ -10,7 +10,7 @@ require('./models/Post');
 const app = express();
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env_MONGODB_URI || `mongodb://localhost:27017/luna-001`);
+mongoose.connect(process.env_MONGODB_URI || `mongodb://localhost:27017/luna-001`, { useNewUrlParser: true});
 
 app.use(bodyParser.json());
 
