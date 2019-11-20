@@ -4,8 +4,7 @@ import axios from 'axios';
 
 export default {
     getAll: async() => {
-        const httpsAgent = new https.Agent({ rejectUnauthorized: false});
-        let res = await axios.get(`/api/post`, { httpsAgent });
+        let res = await axios.get(`/api/post`);
         return res.data || [];
     }
 }
